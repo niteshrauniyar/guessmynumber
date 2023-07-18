@@ -5,9 +5,9 @@
 // document.querySelector('.guess').value = 12;
 // const number = document.querySelector('.guess').value;
 // console.log(number);
-let number = Math.trunc(Math.random() * 4) + 1;
+let number = Math.trunc(Math.random() * 20) + 1;
 
-let score = 4;
+let score = 3;
 let highScore = 0;
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -47,13 +47,13 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector(`.again`).addEventListener(`click`, function () {
-    score = 5;
+    score = 3;
     document.querySelector(`.score`).textContent = score;
     document.querySelector(`body`).style.backgroundColor = `#222`;
     document.querySelector(`.number`).style.width = `15rem`;
     document.querySelector(`.message`).textContent = `Start guessing...`;
     document.querySelector(`.guess`).value = ``;
-    number = Math.trunc(Math.random() * 4) + 1;
+    number = Math.trunc(Math.random() * 20) + 1;
     document.querySelector(`.number`).textContent = `?`;
 
 })
